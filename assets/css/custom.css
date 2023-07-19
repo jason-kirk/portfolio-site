@@ -1,0 +1,664 @@
+/* File containing personal css adjustments */
+
+/* Personal Additions */
+
+/* Variables */
+
+body{
+  --animation-time: 2s;
+  --launch-distance-x: 100px;
+  --launch-distance-y: 1000px;
+
+}
+
+/* Colors */
+
+#skills{
+  background-color: #615c61;
+}
+
+#portfolio{
+  background-color: #2b282b;
+  color: #d2d2d2;
+}
+
+#about {
+  background-color: #474347;
+}
+
+#blog{
+  /* background-color: #615c61; */
+  background-color: #573362;
+}
+
+#contact{
+  background-color: #2b282b;
+}
+
+/* ********************************************* */
+
+@font-face {
+  font-family: Terminal-font;
+  src: url('../webfonts/Modeseven-L3n5.ttf');
+}
+
+#main-header {
+  font-family: Terminal-font;
+  letter-spacing: 0.5em;
+  font-size: 72px;
+}
+
+#main > #top {
+  height: auto;
+  display: block;
+  /* padding: 3em 0; */
+
+}
+
+#header-banner {
+  background-color: black;
+  background-image: url("../../images/map.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  position: absolute;
+  /* height: 100%; */
+  min-height: 100%;
+  width: 100%;
+  top: -160px;
+
+  z-index: -1;
+  transform: scale(1.1);
+  transition: 0.25s all;
+}
+
+#header-content:hover + #header-banner {
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+}
+
+#header-content, header > h2, header > h4 {
+  font-weight: 500;
+  color: white;
+}
+
+#contact-desc {
+  font-size: 0.85em;
+  text-align: justify;
+
+  @media screen and (min-width: 961px){
+    margin: 2em 15%;
+  }
+}
+
+header{
+  & > *{
+    font-family: Terminal-font;
+  }
+}
+
+.button {
+  font-family: Terminal-font;
+}
+
+#contact input[type='submit']{
+  font-family: Terminal-font;
+}
+
+#title{
+  font-family: Terminal-font;
+}
+
+#main > section.one {
+  padding: 0;
+}
+
+#main > section {
+  padding: 6em 0 ;
+}
+
+#header-content{
+  padding: 3em 5em ;
+  position: relative;
+  z-index: 20;
+  margin: 0;
+
+  font-size:x-large;
+  font-family: Terminal-font;
+
+  @media screen and (max-width: 961px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  & > header{
+    padding: 0;
+  }
+}
+
+#portfolio-nav{
+	height: auto;
+}
+
+form input[type="text"], form textarea{
+  padding: 0.5em;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes launchYFrames {
+  0% {
+    animation-timing-function: ease-in-out;
+    transform: translateY(0);
+    filter: opacity(1) brightness(0) invert(1);
+  }
+  30% {
+    animation-timing-function: ease-in;
+    transform: translateY(-100px);
+  }
+  85%{
+    filter: opacity(0.8) brightness(0) invert(1);
+  }
+  90%{
+    transform: translateY(1000px);
+    filter: opacity(0) brightness(0) invert(1);
+    visibility: hidden;
+  }
+  91% {
+    /* animation-timing-function: ease-out; */
+    transform: translateY(0);
+    visibility: visible;
+  }
+  100%{
+    filter: opacity(1) brightness(0) invert(1);
+  }
+}
+
+@keyframes launchXFrames {
+  0% {
+    /* animation-timing-function: linear; */
+    transform: translateX(0);
+  }
+  90%{
+    transform: translateX(var(--launch-distance-x));
+  }
+  91%{
+    transform: translateX(0);
+  }
+  100% {
+    /* animation-timing-function: linear; */
+    transform: translateX(0);
+  }
+}
+
+.launch { 
+  animation: var(--animation-time) ease-in 0s 1 launchXFrames;
+  position: absolute; 
+}
+
+.launch::after {
+  /* width: 20px;
+  height: 20px; */
+  display: block;
+  position: absolute;
+  /* background-color: black; */
+  visibility: visible;
+  content: '';
+  animation: var(--animation-time) ease-out 0s 1 launchYFrames;
+}
+
+.shaky:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+#skill-list {
+  justify-content: center;
+  margin-top: 20px;
+
+  & > div {
+    padding: 0 1em;
+  }
+
+  & > div > div {
+    width: 70px;
+    height: 70px;
+    /* background-size: contain;
+    background-color: transparent;
+    filter: brightness(0) invert(1); */
+
+    /* &:hover {
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+    } */
+    
+  }
+
+  /* Create the background images for ::after */
+  & > div > #csharp::after {
+    background-image: url("../../images/skills/Csharp.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  & > div > #java::after {
+    background-image: url("../../images/skills/java.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  & > div > #js::after {
+    background-image: url("../../images/skills/JS.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  & > div > #vba::after {
+    background-image: url("../../images/skills/VBA.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  & > div > #mysql::after {
+    background-image: url("../../images/skills/MySQL.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  & > div > #postgres::after {
+    background-image: url("../../images/skills/postgres.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  & > div > #mongodb::after {
+    background-image: url("../../images/skills/mongodb.png");
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    /* background-color: #e8edecbd; */
+    background-color: transparent;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+
+}
+
+.angle{
+  height: 100px;
+  transform: translateY(-1px);
+  width: 80%;
+  z-index: 100;
+  /* background-color: transparent; */
+  position: absolute;
+
+  
+}
+
+.angle1 {
+  clip-path: polygon(50% 0%, 100% 0, 93% 9%, 74% 14%, 59% 5%, 41% 10%, 0 0);
+  background-color: #615c61;
+}
+.angle2 {
+  clip-path: polygon(50% 0%, 100% 0, 88% 21%, 64% 12%, 33% 6%, 9% 12%, 0 0);
+  background-color: #2b282b;
+}
+.angle3 {
+  clip-path: polygon(50% 0%, 100% 0, 88% 17%, 46% 10%, 30% 15%, 20% 11%, 0 0);
+  background-color: #474347;
+}
+.angle4 {
+  clip-path: polygon(50% 0%, 100% 0, 76% 14%, 51% 9%, 33% 23%, 10% 17%, 0 0);
+  background-color: #573362;
+}
+
+@keyframes shuffle {
+  0%{
+    transform: translateX(0) translateY(0);
+    animation-timing-function: ease-in;
+  }
+  25%{
+    transform: translateX(var(--horizontal-shuffle)) translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  75%{
+    transform: translateX(var(--horizontal-shuffle)) translateY(var(--shuffle-height));
+    animation-timing-function: ease-out;
+    z-index: 5;
+  }
+  100% {
+    transform: translateX(0) translateY(var(--shuffle-height));
+    z-index: 5;
+    /* animation-timing-function: ease-in-out; */
+  } 
+}
+
+@keyframes stackMove {
+  0%{
+    transform: translateY(0);
+    /* animation-timing-function: ease-in; */
+  }
+  75%{
+    transform: translateY(0);
+    z-index: 10;
+    /* animation-timing-function: ease-out; */
+  }
+  100% {
+    transform: translateY(var(--stackMove-height));
+    z-index: 10;
+    /* animation-timing-function: ease-in-out; */
+  } 
+}
+
+#proj-lists {
+  /* margin: 0 15%; */
+
+  width: 100%;
+  height: 600px;
+  font-family: Terminal-font;
+
+  & > .card {
+    /* background-color: #502c5a; */
+    background-image: linear-gradient(180deg, #804890, #502c5a);
+    border: black solid;
+    width: auto;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 15px;
+    color: white;
+
+
+    &.shuffle{
+      animation: 0.75s shuffle ease-in forwards;
+    }
+
+    &.stackMove{
+      animation: 0.75s stackMove ease-out forwards;
+
+    }
+
+    & h4{
+      color: white;
+      padding-left: 10px;
+      text-align: left;
+      /* width: 50%; */
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: 0.25s all;
+
+      pointer-events: inherit;
+
+    }
+
+    & > .framework-tags{
+      font-size: 0.85em;
+
+      & > h4 {
+        margin-top: 10px;
+        text-decoration: underline;
+      }
+
+      & > div{
+        display: inline-block;
+        padding: 0 1em;
+        margin: 0.2em 0;
+        background-color: grey;
+      }
+    }
+  }
+}
+  
+.proj-list {
+  padding:0;
+
+  & > div{
+    padding: 5px;
+    white-space: nowrap;
+    transition: 0.25s all;
+    cursor: pointer;
+    &:hover{
+      color: #c800ff;
+    }
+  }
+}
+
+#proj-display img {
+  margin: auto 0 ;
+  width: 85%;
+}
+
+#fullscreenBack{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  background-color: black;
+
+  z-index: 400;
+}
+
+#exit-full{
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  background-image: url("../../images/exit-full.png");
+  background-size: cover;
+  z-index: 600;
+
+  height: 2em;
+  width: 2em;
+
+  cursor: pointer;
+}
+
+.fullscreen{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  
+  max-width: 80%;
+  max-height: 80%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 500;
+}
+
+.fullscreen-arrows{
+  /* We want to base the positioning on the size of the screen */
+  height: 2em;
+  width: 2em;
+  z-index: 400;
+  position: fixed;
+  cursor: pointer;
+}
+
+#left-arrow{
+  background-image: url('../../images/left-arrow.png');
+  background-size: cover;
+  top: 50%;
+  left: 2%;
+
+  @media screen and (max-width: 960px){
+    top: auto;
+    bottom: 10px;
+    left: 25%;
+  }
+}
+
+#right-arrow{
+  background-image: url('../../images/right-arrow.png');
+  background-size: cover;
+  top: 50%;
+  right: 2%;
+
+  @media screen and (max-width: 960px){
+    top: auto;
+    bottom: 10px;
+    right: 25%;
+  }
+}
+
+#blog-container{
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+#about-desc{
+  @media screen and (min-width: 961px) {
+    margin: 0 15%;
+  }
+  
+  & > div{
+    padding-bottom: 20px;
+    line-height: 1.5;
+    text-align:justify;
+    font-size: 0.85em;
+  }
+}
+
+#contact-desc{
+  line-height: 1.5;
+}
+
+#about-banner > img{
+  height: 14em;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: brightness(75%);
+}
+
+.blog-link {
+  border-bottom: none;
+  display: block;
+  margin: 0 10%;
+
+  & > h4{
+    font-family: Terminal-font;
+    font-size: 1.5em;
+  }
+
+  & > div {
+    line-height: 1.1em;
+    text-align: left;
+  }
+
+  & > img {
+    border-radius: 5px;
+  }
+
+  &:hover {
+    color: currentColor;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Used to keep the project selections on the right for PC but on the top when mobile */
+/* Mobile */
+@media screen and (max-width: 736px) {
+  #portfolio-nav {
+      transform: rotate(180deg);
+  }
+  #portfolio-nav > div {
+      transform: rotate(-180deg);
+  }
+}
+
+/* Narrower */
+@media screen and (max-width: 960px){
+  .hide-narrower{
+    display: none;
+  }
+}
+
+/* Narrow */
+@media screen and (min-width: 961px) and (max-width: 1320px) {
+  .hide-narrow{
+    display: none;
+  }
+}
+
+/* Normal */
+@media screen and (min-width: 961px) and (max-width: 1620px) {
+  .hide-normal{
+    display: none;
+  }
+}
+
+/* Wide */
+@media screen and (min-width: 961px) and (max-width: 1880px) {
+  .hide-wide{
+    display: none;
+  }
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<!-- 
+	The contents of this site were heavily modified from the original template but I'm keeping the credit here.
+-->
+<html>
+	<head>
+		<title>Jason Kirk</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Backdrop for fullscreen moments -->
+		<div id="fullscreen-elems"></div>
+		<div style="display: none;" id="fullscreenBack"></div>
+		<div style="display: none;" id="exit-full"></div>
+		<div style="display: none;" id="left-arrow" class="fullscreen-arrows"></div>
+		<div style="display: none;" id="right-arrow" class="fullscreen-arrows"></div>
+
+		<!-- Header -->
+			<div id="header">
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.png" alt="" /></span>
+							<h1 id="title">Jason Kirk</h1>
+							<p>Software Engineer</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#skills" id="skills-link"><span class="icon solid fa-code">Skills</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-laptop">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#blog" id="blog-link"><span class="icon solid fa-rss">Blog</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a target="_blank" href="https://www.linkedin.com/in/jason-a-kirk/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a target="_blank" href="https://github.com/jason-kirk" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#contact" class="icon solid fa-envelope scrolly"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div id="header-content" class="">
+
+							<header>
+								<h2 id="main-header" class="alt">JASON KIRK</h2>
+								<p>A Software Engineer exploring the <br> world through technology.</p>
+							</header>
+
+							<footer>
+								<a draggable="false" href="#contact" class="button scrolly">Contact me!</a>
+							</footer>
+
+						</div>
+						<div id="header-banner"></div>
+
+					</section>
+
+				<!-- Skills -->
+					<section id="skills" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Skills</h2>
+							</header>
+
+							<div id="skill-list" class="row">
+								<div class="col-1 col-3-narrower"><div id="csharp" class="shaky" onclick="blastNEW('csharp')" draggable="false" src="images/skills/Csharp.png" alt="C Sharp"></div></div>
+								<div class="col-1 col-3-narrower"><div id="java" class="shaky" onclick="blastNEW('java')" draggable="false" src="images/skills/java.png" alt="Java"></div></div>
+								<div class="col-1 col-3-narrower"><div id="js" class="shaky" onclick="blastNEW('js')" draggable="false" src="images/skills/JS.png" alt="Javascript"></div></div>
+								<div class="col-1 col-3-narrower"><div id="vba" class="shaky" onclick="blastNEW('vba')" draggable="false" src="images/skills/VBA.png" alt="Visual Basic for Applications"></div></div>
+								<div class="col-1 col-3-narrower"><div id="mysql" class="shaky" onclick="blastNEW('mysql')" draggable="false" src="images/skills/MySQL.png" alt="MySQL"></div></div>
+								<div class="col-1 col-3-narrower"><div id="postgres" class="shaky" onclick="blastNEW('postgres')" draggable="false" src="images/skills/postgres.png" alt="Postgres"></div></div>
+								<div class="col-1 col-3-narrower"><div id="mongodb" class="shaky" onclick="blastNEW('mongodb')" draggable="false" src="images/skills/mongodb.png" alt="MongoDB"></div></div>
+								<!-- <div class="col-1 col-3-narrower"><div draggable="false" src="images/skills/" alt=""></div></div>
+								<div class="col-1 col-3-narrower"><div draggable="false" src="images/skills/" alt=""></div></div>
+								<div class="col-1 col-3-narrower"><div draggable="false" src="images/skills/" alt=""></div></div>
+								<div class="col-1 col-3-narrower"><div draggable="false" src="images/skills/" alt=""></div></div>
+								<div class="col-1 col-3-narrower"><div draggable="false" src="images/skills/" alt=""></div></div> -->
+							</div>
+
+						</div>
+					</section>
+
+					<div class="angle angle1"></div>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<div id="portfolio-nav" class="row">
+								
+								<!-- Project display -->
+								<div id="proj-display" class="col-8 col-12-mobile">
+									<div class="display-container">
+										<img class="websitedisplay" src="images\website.png" alt="">
+										<img class="websitedisplay" style="display: none;" src="images\pic05.jpg" alt="">
+										<img class="websitedisplay" style="display: none;" src="images\pic06.jpg" alt="">
+									</div>
+									<div class="display-container"><img id="workoutdisplay" style="display: none;" src="images\pic03.jpg" alt=""></div>
+									<div class="display-container"><img id="dnpdisplay" style="display: none;" src="images\pic04.jpg" alt=""></div>
+									<div class="display-container"><img id="" style="display: none;" src="images\pic05.jpg" alt=""></div>
+									<div class="display-container"><img id="" style="display: none;" src="images\pic06.jpg" alt=""></div>
+									<div class="display-container"><img id="" style="display: none;" src="images\pic07.jpg" alt=""></div>
+								</div>
+
+								<!-- Project List -->
+								<div class="col-4 col-12-mobile">
+									<div id="proj-lists">
+
+										<div id="dnp" class="card">
+											<h4>DNP - Dog Nutrition Plus</h4>
+											<div class="framework-tags">
+												<h4>Frameworks/Skills:</h4> 
+												<div>Javascript</div>
+												<div>HTML</div>
+												<div>CSS</div>
+												<div>MySQL</div>
+												<div>Node.js</div>
+												<div>Express</div>
+												<div>React</div>
+											</div>
+										</div>
+										<div id="workout" class="card">
+											<h4>Personal Workout Website</h4>
+											<div class="framework-tags">
+												<h4>Frameworks/Skills:</h4> 
+												<div>Javascript</div>
+												<div>HTML</div>
+												<div>MongoDB</div>
+											</div>
+										</div>
+										<!-- This card should be displaying the project -->
+										<div id="website" class="card">
+											<h4>Portfolio Website</h4>
+											<div class="framework-tags">
+												<h4>Frameworks/Skills:</h4> 
+												<div>Javascript</div>
+												<div>CSS</div>
+												<div>HTML</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<div class="angle angle2"></div>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" id="about-banner" class="image featured"><img src="images/banner.png" alt="" /></a>
+
+							<div id="about-desc">
+								<div class="">I'm a motivated professional with a strong background in Computer Science, pursuing a Master's degree while working as a Software Developer at Tyler Technologies. I strive to combine technical expertise with an understanding of human needs. As Frank Zappa once said, "The computer can give you the exact mathematical design, but what's missing is the eyebrows."</div>
+
+								<div class="">Throughout my academic journey, I've developed skills in organization, time management, and problem-solving through various roles. At Tyler Technologies, I effectively apply these skills, collaborating and prioritizing to contribute to the development process.</div>
+
+								<div class="">Beyond work, I have a passion for exploration and adventure, which fuels my creativity and problem-solving abilities when coding. I'm committed to personal and professional growth, actively seeking diverse collaborations to broaden my skill set.</div>
+
+								<div class="">As a dedicated, skilled, and compassionate professional in Software Development, I'm eager to connect with like-minded individuals making a meaningful impact through technology.</div>
+							</div>
+						</div>
+					</section>
+
+					<div class="angle angle3"></div>
+
+				<!-- Blog -->
+					<section id="blog" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Blog</h2>
+							</header>
+
+							<div id="blog-container" class="row">
+								<div class="col-4 col-6-narrow col-12-narrower col-12-mobile">Loading...</div>
+								<div class="col-4 col-6-narrow col-6-narrower col-12-mobile hide-narrower">Loading...</div>
+								<div class="col-4 col-6-narrow col-6-narrower col-12-mobile hide-narrower hide-narrow">Loading...</div>
+							</div>
+
+							<a draggable="false" target="_blank" href="https://blog.jasonkirk.dev/"><div class="button">See more posts!</div></a>
+
+							<!-- <img src="images/pic02.jpg"> -->
+
+						</div>
+					</section>
+
+					<div class="angle angle4"></div>
+
+				<!-- Contact -->
+					<section id="contact" class="five">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+								<h4>Thank you for visting my portfolio!</h4>
+							</header>
+
+
+							<p id="contact-desc">I'm passionate about software development and eager to collaborate on exciting projects. If you have a question, potential opportunity, or simply want to connect, I'd love to hear from you. I aim to respond promptly and look forward to discussing how we can work together to bring innovative solutions to life.</p>
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-4 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-4 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-4 col-12-mobile"><input type="text" name="phone" placeholder="Phone Number" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2023 Jason Kirk. All rights reserved.</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/cards.js"></script>
+			<script src="assets/js/blog.js"></script>
+			<script src="assets/js/shakeup.js"></script>
+			<script src="assets/js/custom.js"></script>
+
+	</body>
+</html>
