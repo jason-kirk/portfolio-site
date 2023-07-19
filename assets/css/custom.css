@@ -627,6 +627,11 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
+
 /* Used to keep the project selections on the right for PC but on the top when mobile */
 /* Mobile */
 @media screen and (max-width: 736px) {
