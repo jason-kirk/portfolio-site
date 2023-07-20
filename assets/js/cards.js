@@ -53,7 +53,8 @@ function reDisplay(){
   console.log(cardStack)
   for(let i = 0; i < cardStack.length; i++){
     cardStack[i].removeAttribute('style')
-    cardStack[i].style.top = `${cardStack[i].style.top - 450*i}px`
+    console.log(cardStack[i].getBoundingClientRect().height)
+    cardStack[i].style.top = `${cardStack[i].style.top - (cardStack[i].getBoundingClientRect().height-50)*i}px`
   }
 }
 

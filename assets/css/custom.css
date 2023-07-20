@@ -41,12 +41,25 @@ body{
   font-family: Terminal-font;
   src: url('../webfonts/Modeseven-L3n5.ttf');
 }
-
-#main-header {
-  font-family: Terminal-font;
-  letter-spacing: 0.5em;
-  font-size: 72px;
+ 
+@media screen and (min-width: 960px){
+  #main-header {
+    font-family: Terminal-font;
+    letter-spacing: 0.5em;
+    font-size: 3em;
+  }
 }
+
+@media screen and (max-width: 960px){
+  #main-header {
+    font-family: Terminal-font;
+    letter-spacing: 0.5em;
+    font-size: 2.5em;
+    text-align: center;
+    padding-left: 0.25em;
+  }
+}
+
 
 #main > #top {
   height: auto;
@@ -63,7 +76,7 @@ body{
   background-color: black;
   background-image: url("../../images/map.jpg");
   background-size: cover;
-  /* background-position: center center; */
+  background-position: center center;
   display: block;
   position: absolute;
   /* height: 100%; */
@@ -77,7 +90,7 @@ body{
 
   
 
-  @media screen and (max-width: 960px){
+  @media (max-width: 960px){
     top: -80px;
     transform: scale(1);
 
@@ -148,7 +161,12 @@ header{
 }
 
 #main > section {
-  padding: 6em 0 ;
+  @media screen and (max-width: 960px) {
+    padding-top: 3em;
+  }
+  @media screen and (min-width: 960px) {
+    padding-top: 6em;
+  }
 }
 
 #header-content{
@@ -269,6 +287,8 @@ form input[type="text"], form textarea{
   & > div > div {
     width: 70px;
     height: 70px;
+
+    margin-bottom: 2em;
     /* background-size: contain;
     background-color: transparent;
     filter: brightness(0) invert(1); */
@@ -371,7 +391,7 @@ form input[type="text"], form textarea{
 .angle{
   height: 100px;
   transform: translateY(-1px);
-  width: 80%;
+  width: 100%;
   z-index: 100;
   /* background-color: transparent; */
   position: absolute;
@@ -382,18 +402,34 @@ form input[type="text"], form textarea{
 .angle1 {
   clip-path: polygon(50% 0%, 100% 0, 93% 9%, 74% 14%, 59% 5%, 41% 10%, 0 0);
   background-color: #615c61;
+
+  @media screen and (max-width: 960px) {
+    clip-path: polygon(100% 0, 0 0, 20% 20%);
+  }
 }
 .angle2 {
   clip-path: polygon(50% 0%, 100% 0, 88% 21%, 64% 12%, 33% 6%, 9% 12%, 0 0);
   background-color: #2b282b;
+
+  @media screen and (max-width: 960px) {
+    clip-path: polygon(100% 0, 0 0, 78% 9%);
+  }
 }
 .angle3 {
   clip-path: polygon(50% 0%, 100% 0, 88% 17%, 46% 10%, 30% 15%, 20% 11%, 0 0);
   background-color: #474347;
+
+  @media screen and (max-width: 960px) {
+    clip-path: polygon(100% 0, 0 0, 28% 16%);
+  }
 }
 .angle4 {
   clip-path: polygon(50% 0%, 100% 0, 76% 14%, 51% 9%, 33% 23%, 10% 17%, 0 0);
   background-color: #573362;
+
+  @media screen and (max-width: 960px) {
+    clip-path: polygon(100% 0, 0 0, 100% 22%);
+  }
 }
 
 @keyframes shuffle {
@@ -451,6 +487,11 @@ form input[type="text"], form textarea{
     position: relative;
     border-radius: 15px;
     color: white;
+
+    @media screen and (max-width: 960px) {
+      height: 20em;
+      width: 80%;
+    }
 
 
     &.shuffle{
