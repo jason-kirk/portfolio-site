@@ -1,0 +1,10 @@
+bin/
+public/
+routes/
+views/
+node_modules/
+
+app.js
+nodemon.json
+package.json
+package-lock.json

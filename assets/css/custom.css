@@ -55,11 +55,15 @@ body{
 
 }
 
+#main{
+  overflow-x: hidden;
+}
+
 #header-banner {
   background-color: black;
   background-image: url("../../images/map.jpg");
   background-size: cover;
-  background-position: center center;
+  /* background-position: center center; */
   display: block;
   position: absolute;
   /* height: 100%; */
@@ -70,14 +74,41 @@ body{
   z-index: -1;
   transform: scale(1.1);
   transition: 0.25s all;
+
+  
+
+  @media screen and (max-width: 960px){
+    top: -80px;
+    transform: scale(1);
+
+    &::after{
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      width: 100%;
+      height: 100%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: '';
+    }
+    /* transform: scale(1); */
+
+    /* We want to keep this blurred on mobile */
+    /* -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px); */
+  }
 }
 
-#header-content:hover + #header-banner {
-  -webkit-filter: blur(7px);
-  -moz-filter: blur(7px);
-  -o-filter: blur(7px);
-  -ms-filter: blur(7px);
-  filter: blur(7px);
+@media screen and (min-width: 960px){
+  #header-content:hover + #header-banner {
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+  }
 }
 
 #header-content, header > h2, header > h4 {
